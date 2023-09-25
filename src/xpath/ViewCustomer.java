@@ -3,10 +3,9 @@ package xpath;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class LoginDemo {
+public class ViewCustomer {
 
     public static void main(String[] args) throws InterruptedException {
 
@@ -23,17 +22,16 @@ public class LoginDemo {
         WebElement btnLogin = driver.findElement(By.xpath("//input[@type='submit']"));
         btnLogin.click();
 
-       // driver.findElement(By.linkText("Add Customer")).click();
-       // driver.findElement(By.partialLinkText("Add C")).click();
 
-       // driver.findElement(By.xpath("//a[@href='add_customer.php']")).click();
         driver.findElement(By.xpath("//a[text()= 'Add Customer' ]")).click();
+        driver.findElement(By.xpath("//a[normalize-space()='View Customers']")).click();
 
-        driver.findElement(By.xpath("//input[@name='name']")).sendKeys("Jagdhish");
-        driver.findElement(By.xpath("//*[@name='address']")).sendKeys("xyz");
-        driver.findElement(By.xpath("//*[@name='contact1']")).sendKeys("35454545");
-        driver.findElement(By.xpath("//*[@name='contact2']")).sendKeys("54545454");
-        driver.findElement(By.xpath("//*[@type='submit']")).click();
+
+        //driver.findElement(By.xpath("//tr[td [normalize-space()='priti']]//a[contains( @class , 'edit')]")).click();
+
+        driver.findElement(By.xpath("//tr[td [normalize-space()='priti']]//input")).click();
+
+
 
     }
 }
