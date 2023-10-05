@@ -1,0 +1,20 @@
+<suite name="Project name">
+
+    <parameter name="myUrl" value="http://instagram.com"/>
+    <parameter name="myUsername" value="ins-1"/>
+    <parameter name="myPassword" value="p-123"/>
+
+    <test name="module 1">
+        <classes>
+            <class name="TestNGDemo.Demo2.ClassOne"/>
+            <class name="TestNGDemo.Demo2.ClassTwo"/>
+        </classes>
+    </test>
+
+    <test name="module 2">
+        <classes>
+            <class name="TestNGDemo.Demo2.ClassThree"/>
+        </classes>
+    </test>
+
+</suite>

@@ -17,12 +17,14 @@ public class ClassOne {
 
 
 
-    @Test
+    @Test //(enabled = false)
     public void classOneTest1()
     {
+
         System.out.println("classOneTest1");
+
     }
-    @Test
+    @Test (groups = "email")
     public void classOneTest2()
     {
         System.out.println("classOneTest2");
