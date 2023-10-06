@@ -1,3 +1,5 @@
+package basic;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -5,25 +7,17 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.List;
 
-public class LoginDemoFindElements {
+public class LoginDemoFindElements4 {
 
     public static void main(String[] args) throws InterruptedException {
 
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("http://stock.scriptinglogic.org/");
+        driver.get("https://the-internet.herokuapp.com/");
 
-        List<WebElement> wbList = driver.findElements(By.tagName("input"));
+        WebElement wbList = driver.findElement(By.tagName("a"));
 
-        System.out.println("size="+wbList.size());
-
-        wbList.get(0).sendKeys("admin");
-        wbList.get(1).sendKeys("admin");
-        wbList.get(2).click();
-
-
-
-
+        wbList.click();
 
     }
 }
